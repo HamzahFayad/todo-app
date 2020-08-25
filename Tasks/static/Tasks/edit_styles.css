@@ -1,0 +1,33 @@
+*{
+    margin: auto;
+    text-align: center;
+}
+.header{
+    text-align: center;
+    margin: auto;
+    padding: 12px;
+}
+
+.edit, .delete-btn, .add-btn{
+    background: mediumseagreen;
+    margin: 2% auto;
+    padding: 10px;
+}
+
+.edit:hover{
+    background: mediumseagreen !important;
+}
+
+input{
+    background: ghostwhite;
+    padding: 2px;
+}
+
+.back{
+    margin-left: .8%;
+    color: mediumseagreen;
+    font-weight: bolder;
+    font-size: 1.1em;
+    padding: 4px;
+    text-decoration: none;
+}

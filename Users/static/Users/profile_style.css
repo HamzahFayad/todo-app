@@ -1,0 +1,32 @@
+.profile-pic{
+    border-radius: 50%;
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+h1, h4{
+    text-align: center;
+}
+
+.name{
+        margin-top: 4%;
+}
+
+.bio{
+    color: #122a3a;
+    font-size: 2em;
+    width: 50%;
+    border: 1px solid black;
+    margin: auto;
+    text-align: left;
+    padding: 6px;
+}
+
+.edit{
+    font-size: 0.4em;
+    float: right;
+    color: #d67b64;
+    background: #122a3a;
+    padding: 6px;
+}

@@ -1,0 +1,60 @@
+*{
+    background: #d67b64;
+}
+p{
+    width: 80%;
+    font-size: 1.2rem;
+    text-align: center;
+    margin: auto;
+    padding: 4px;
+    background: #ffffff;
+}
+
+.btn{
+    width: max-content;
+    padding: 4px;
+    margin-top: 6.5%;
+}
+
+.one-task{
+    width: 80%;
+    margin: auto;
+    padding: 4px;
+    margin: 1% auto;
+    background: #ffffff;
+    box-shadow: 3px 4px 5px 0px #122a3a;
+}
+
+.edit{
+    background: #ffffff;
+}
+
+.task{
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: space-evenly;
+    background: #ffffff;
+}
+
+.my-img{
+    float: left;
+    width:  120px;
+    height: 120px;
+    object-fit: cover;
+    padding: 6px;
+    background: #ffffff;
+    margin-left: 1%;
+}
+
+i{
+    background: transparent;
+}
+
+.add{
+    margin-left: .8%;
+    color: mediumseagreen;
+    font-weight: bolder;
+    font-size: 1.3em;
+    padding: 4px;
+    text-decoration: none;
+}

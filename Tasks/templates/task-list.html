@@ -1,0 +1,56 @@
+{% extends 'home.html' %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home_styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Tasks/todo_styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block title %}Task List{% endblock %}
+
+{% block logged_in_content %}
+    <div class="topnav" id="myTopnav">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'profile' user.myuser.id %}" id="profile">{{ user.username }}</a>
+        <a href="{% url 'task-list' %}">Todos</a>
+        <a href="{% url 'logout' %}" id="logout">Logout</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div><br>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <a class="add" href={% url 'task-create' %}>Add</a>
+    <div class="container-fluid">
+        <div class="row">
+            {% for task in all_tasks %}
+                <div class="one-task">
+                    <div class="task">
+                        <p>{{ task.text }}</p>
+                    </div>
+                    <img class="my-img" src="{{ task.get_photo_url }}"/>
+                    {% if task.get_photo_url == "/static/img/white.png" %}
+                        <a style="float: right" href="{% url 'task-delete' task.id %}" class="btn btn-warning">Delete</a>
+                        <a style="float: right" href="{% url 'edit-task' task.id %}" class="btn btn-primary">Edit</a>
+                    {% else %}
+                        <div class="edit">
+                            <a href="{% url 'edit-task' task.id %}" class="btn btn-primary">Edit</a>
+                            <a href="{% url 'task-delete' task.id %}" class="btn btn-warning">Delete</a>
+                        </div>
+                    {% endif %}
+                </div>
+
+            {% endfor %}
+{% endblock %}

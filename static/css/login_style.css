@@ -1,0 +1,82 @@
+body{
+    background: #d67b64;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 10%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 300%;
+    font-weight: lighter;
+}
+
+h4{
+    margin-left: 10%;
+}
+
+h5{
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.signup{
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+p {
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding-top: 15px;
+    padding-bottom: 5%;
+    margin: 3% auto;
+    text-align: center;
+}
+
+label {
+    text-align: left;
+    margin-left: 20px;
+}
+
+input {
+    max-width: 400px;
+    width: 80%;
+    line-height: 3em;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 5px;
+    border: 2px solid #f2f2f2;
+    outline: none;
+}
+
+button {
+    background: #122a3a;
+    display: block;
+    margin: auto;
+    height: 30px;
+    width: 100px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+}
+
+a{
+    color: #122a3a;
+    font-family: "Apple Color Emoji";
+    text-decoration: none;
+    width: max-content;
+}
+
+a:hover{
+    color: #4b7393;
+}
+
+#id_profile_picture{
+    border: none;
+}
